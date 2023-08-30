@@ -1,91 +1,60 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
-
+"use client";
+import Image from "next/image";
+import Panaverse from "../../public/images.png";
+import Navbar from "../components/Navbar/Navbar";
+import Main from "./Main/page";
+import Courses from "./Courses/page";
+import Footer from "@/components/Footer/Footer";
+import Teachers from "@/app/Teacher_timeline/Teachers";
+import Welcome from "./welcome/page";
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    //by default flex direction is row properties are justify content
+    // <div className="flex justify-center">
+    // <Image src={Panaverse} alt='panaverse'/>
+    // {/* <Image src="/images.png" alt="panaverse"/> */}
+    // <div>
+    //   <h1>Welcome to panaverse</h1>
+    //   <h2>A Community of Web 3 and Metaverse Developers</h2>
+    //   <button>Learn More</button>
+    // </div>
+    // </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
+    // <div className="flex justify-center bg-gray-300">
+    //   <div className="mx-4 order-last self-center">
+    //     <Image src={Panaverse} width={80} height={80} alt="music"/>
+    //   </div>
+    //   <div className="mx-4 self-center text-center">
+    //     <h1 className="text-5xl font-bold text-blue-700">Welcome to Panaverse</h1>
+    //     <h2 className="text-3xl font-semibold text-blue-300">A Community of Web and Metaverse</h2>
+    //     <button className="my-4 px-4 py-2 border-2 border-black bg-gray-500">click me</button>
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+    //   </div>
+    //   {/* < div class="quote">
+    //     <p class="quote">pakistan</p>
+    //   </div> */}
+    //   <div  className="container min-h-screen grid grid-cols-3 gap-x-6 ">
+    //     <div>
+    //       <p className="bg-orange-400 p-4"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ratione maiores laudantium voluptatem nesciunt officia blanditiis officiis, repellat commodi, atque cupiditate asperiores temporibus ipsa, possimus fugit velit similique molestiae? Eum!</p>
+    //     </div>
+    //     <div>
+    //       <p className="bg-red-400"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ratione maiores laudantium voluptatem nesciunt officia blanditiis officiis, repellat commodi, atque cupiditate asperiores temporibus ipsa, possimus fugit velit similique molestiae? Eum!</p>
+    //     </div>
+    //     <div>
+    //       <p className="bg-yellow-400"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ratione maiores laudantium voluptatem nesciunt officia blanditiis officiis, repellat commodi, atque cupiditate asperiores temporibus ipsa, possimus fugit velit similique molestiae? Eum!</p>
+    //     </div>
+    //     <div>
+    //       <p className="bg-green-400"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ratione maiores laudantium voluptatem nesciunt officia blanditiis officiis, repellat commodi, atque cupiditate asperiores temporibus ipsa, possimus fugit velit similique molestiae? Eum!</p>
+    //     </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    //   </div>
+    <div>
+      <Navbar/>
+      <Welcome/>
+      <Main/>
+      <Courses/>
+      <Teachers/>
+      <Footer/>
+    </div>
+  );
 }

@@ -1,0 +1,20 @@
+{
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "cSpell.words": [
+    "Aave",
+    "ALVI",
+    "ARIF",
+    "extralight",
+    "Metaverse",
+    "Montmorency",
+    "nextjs",
+    "panaverse",
+    "pngegg",
+    "Raleway",
+    "reactjs",
+    "tailwindcss",
+    "trpc",
+    "vedio"
+  ]
+}
